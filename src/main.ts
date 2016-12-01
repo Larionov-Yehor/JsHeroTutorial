@@ -11,8 +11,3 @@ if (environment.production) {
 
 platformBrowserDynamic().bootstrapModule(AppModule);
 
-@Component({
-  template: '<h1>{{hero.name}} details!</h1>'
-
-})
-
