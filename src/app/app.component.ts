@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
+import { Hero } from "./hero-details/hero";
+import {HeroDetailComponent} from "./hero-details/hero-detail.component";
+
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
-
   styles: [`
   .selected {
     background-color: #CFD8DC !important;
@@ -54,26 +55,19 @@ import { Component } from '@angular/core';
     border-radius: 4px 0 0 4px;
   }
 `]
-
-
 })
+
 export class AppComponent{
 
   heroes: Hero[] = HEROES;
   selectedHero: Hero;
   onSelect(hero: Hero): void{
-    this.selectedHero = hero
+  this.selectedHero = hero
   }
-
 }
-
-export class Hero {
-  id: number;
-  name: string;
-}
-
 const HEROES: Hero[]=[
-  {id: 2, name: 'Hlopec'},
-  {id: 3, name: 'Pacanchik'},
-  {id: 4, name: 'Bebchik'}
+  {id: 2, name: 'first'},
+  {id: 3, name: 'second'},
+  {id: 4, name: 'third'}
 ];
+
