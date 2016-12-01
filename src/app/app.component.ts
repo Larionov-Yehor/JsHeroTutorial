@@ -55,14 +55,15 @@ import { Component } from '@angular/core';
   }
 `]
 
-
 })
 export class AppComponent{
-  hero: Hero = {
-    id:1,
-    name: 'Kent'
-  }
+
   heroes: Hero[] = HEROES;
+  selectedHero: Hero;
+  onSelect(hero: Hero): void{
+    this.selectedHero = hero
+  }
+
 }
 
 export class Hero {
